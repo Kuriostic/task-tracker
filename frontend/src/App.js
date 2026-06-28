@@ -6,7 +6,7 @@ import FilterBar from './components/FilterBar';
 import axios from 'axios';
 import './App.css';
 
-const API = 'http://localhost:5000/api/tasks';
+const API = 'https://task-tracker-backend-jh2j.onrender.com/api/tasks';
 
 function App() {
   const [tasks, setTasks] = useState([]);
