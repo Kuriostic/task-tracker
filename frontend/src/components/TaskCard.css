@@ -1,0 +1,114 @@
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  gap: 16px;
+  flex-wrap: wrap;
+  transition: transform 0.15s;
+  border-left: 4px solid #667eea;
+}
+
+.task-card:hover { transform: translateY(-2px); }
+.task-card.completed { border-left-color: #48bb78; opacity: 0.8; }
+
+.task-card-left { flex: 1; min-width: 200px; }
+
+.task-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2d3748;
+}
+
+.task-card.completed .task-title {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task-desc {
+  font-size: 0.88rem;
+  color: #718096;
+  margin-bottom: 6px;
+}
+
+.task-meta { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.due-date {
+  font-size: 0.8rem;
+  color: #718096;
+  background: #f7fafc;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.due-date.overdue {
+  color: #e53e3e;
+  background: #fff5f5;
+  font-weight: 600;
+}
+
+.task-card-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.status-btn {
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.status-btn:hover { opacity: 0.85; }
+
+.task-actions { display: flex; gap: 8px; }
+
+.edit-btn {
+  background: #ebf4ff;
+  color: #3182ce;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.edit-btn:hover { background: #bee3f8; }
+
+.delete-btn {
+  background: #fff5f5;
+  color: #e53e3e;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover { background: #fed7d7; }
+
+@media (max-width: 600px) {
+  .task-card { flex-direction: column; align-items: flex-start; }
+  .task-card-right { width: 100%; }
+}
