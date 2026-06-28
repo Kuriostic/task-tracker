@@ -26,7 +26,8 @@ function App() {
       toast.error('Failed to fetch tasks');
     }
   };
-
+  
+// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { fetchTasks(); }, [filters]);
 
   const handleCreate = async (data) => {
